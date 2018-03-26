@@ -1,0 +1,147 @@
+body {
+    font-family: 'Source Sans Pro', sans-serif;
+    background-color: #eeeeee;
+    font-size: 16px;
+    line-height: 24px;
+    color: #000000;
+}
+
+article span {
+    color: #ff0200;
+}
+
+article p {
+    margin-bottom: 30px;
+}
+
+.page {
+    max-width: 906px;
+    margin: 0 auto;
+}
+
+.header {
+    margin: 125px 0 110px 0;
+}
+
+.header__contact {
+    float: right;
+    text-align: right;
+}
+
+.contact__item {
+    margin-bottom: 28px;
+}
+
+.contact__adress {
+    font-size: 14px;
+}
+
+.contact__phone {
+    font-size: 24px;
+}
+
+.contact__link {
+    color: #000;
+    text-decoration: none;
+}
+
+.contact__mail a {
+    color: #ff0200;
+    text-decoration: none;
+}
+
+.title {
+    margin-bottom: 50px;
+    font-size: 24px;
+    color: #29326b;
+}
+
+.service {
+    margin-bottom: 25px;
+}
+
+.service__img {
+    float: left;
+    margin-top: 13px;
+}
+
+.service__wrap {
+    padding-left: 100px;
+}
+
+.service__title {
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.get-consultation {
+    margin-top: 40px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 0 15px;
+    font-size: 17px;
+    color: #fff;
+    text-decoration: none;
+    line-height: 32px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+}
+
+.btn_color_red {
+    background-color: #fb2628;
+}
+
+.title_type_documents {
+    margin-top: 75px;
+}
+
+.title_color_orange {
+    color: #ff4b00;
+}
+
+.documents_wrapper {
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.document {
+    flex-grow: 1;
+    flex-basis: 147px;
+    list-style:none;
+    width: 16%;
+    margin: 2% 1% 40px 1%;
+}
+
+.title_type_contacts {
+    margin-top: 75px;
+}
+
+.contacts__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 70px;
+}
+
+.contacts__item {
+}
+
+.contacts__header {
+    font-size: 14px;
+    line-height: 30px;
+}
+
+.contacts__map {
+    margin-top: 25px;
+}
+
+.copyright {
+    margin: 230px 0 40px 0;
+    font-size: 14px;
+    text-align: center;
+}
