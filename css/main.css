@@ -20,7 +20,7 @@ article p {
 }
 
 .header {
-    margin: 125px 0 110px 0;
+    padding: 125px 0 110px 0;
 }
 
 .header__contact {
@@ -144,4 +144,18 @@ article p {
     margin: 230px 0 40px 0;
     font-size: 14px;
     text-align: center;
+}
+
+.nav {
+    position: fixed;
+    top: 30%;
+    right: 32px;
+}
+
+.nav__item {
+    margin-bottom: 30px;
+}
+
+.nav__item:last-child {
+    margin-bottom: 0;
 }

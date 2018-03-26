@@ -24,52 +24,54 @@
 <body>
 
 <div class="page page_type_main">
-    <header class="header">
-        <div class="header__contact contact contact_position_top">
-            <div class="contact__item">
-                <div class="contact__adress">
-                    Краснодар, ул. Гоголя, 74 А
+    <div class="first-page">
+        <header class="header" id="home">
+            <div class="header__contact contact contact_position_top">
+                <div class="contact__item">
+                    <div class="contact__adress">
+                        Краснодар, ул. Гоголя, 74 А
+                    </div>
+                    <div class="contact__phone">
+                        <a href="tel:88612743007" class="contact__link">
+                            8 (861) 274-30-07
+                        </a>
+                        |
+                        <a href="tel:89615093957" class="contact__link">
+                            8 961 509-39-57
+                        </a>
+                    </div>
                 </div>
-                <div class="contact__phone">
-                    <a href="tel:88612743007" class="contact__link">
-                        8 (861) 274-30-07
-                    </a>
-                    |
-                    <a href="tel:89615093957" class="contact__link">
-                        8 961 509-39-57
-                    </a>
+                <div class="contact__item">
+                    <div class="contact__adress">
+                        Ростов-на-Дону, просп. Соколова, 80
+                    </div>
+                    <div class="contact__phone">
+                        <a href="tel:89615093957" class="contact__link">
+                            8 961 509-39-57
+                        </a>
+                    </div>
+                </div>
+                <div class="contact__mail">
+                    <a href="mailto:expert.unex@yandex.ru">expert.unex@yandex.ru</a>
                 </div>
             </div>
-            <div class="contact__item">
-                <div class="contact__adress">
-                    Ростов-на-Дону, просп. Соколова, 80
-                </div>
-                <div class="contact__phone">
-                    <a href="tel:89615093957" class="contact__link">
-                        8 961 509-39-57
-                    </a>
-                </div>
-            </div>
-            <div class="contact__mail">
-                <a href="mailto:expert.unex@yandex.ru">expert.unex@yandex.ru</a>
-            </div>
-        </div>
-        <img src="img/logo.png" alt="" class="logo">
-    </header>
-    <article class="article_type_main">
-        <p>
-            <span>Автономная некоммерческая организация в области экспертно-оценочной деятельности «Южная независимая экспертиза»</span> — это
-            высококлассные эксперты, оценщики и юристы с большим практическим опытом. Мы безошибочно добиваемся намеченных целей,
-            избавляя вас от возникших проблем, оперативно оказывая экспертные услуги и грамотную юридическую помощь.
-        </p>
-        <p>
-            В своей деятельности руководствуемся Федеральным законом от 31.05.2001 года № 73-ФЗ «О государственной судебно-экспертной
-            деятельности в Российской Федерации», действующим законодательством Российской Федереции и иными нормативными актами,
-            действующими на территории Российской Федерации.
-        </p>
+            <img src="img/logo.png" alt="" class="logo">
+        </header>
+        <article class="article_type_main">
+            <p>
+                <span>Автономная некоммерческая организация в области экспертно-оценочной деятельности «Южная независимая экспертиза»</span> — это
+                высококлассные эксперты, оценщики и юристы с большим практическим опытом. Мы безошибочно добиваемся намеченных целей,
+                избавляя вас от возникших проблем, оперативно оказывая экспертные услуги и грамотную юридическую помощь.
+            </p>
+            <p>
+                В своей деятельности руководствуемся Федеральным законом от 31.05.2001 года № 73-ФЗ «О государственной судебно-экспертной
+                деятельности в Российской Федерации», действующим законодательством Российской Федереции и иными нормативными актами,
+                действующими на территории Российской Федерации.
+            </p>
 
-    </article>
-    <article class="article_type_services">
+        </article>
+    </div>
+    <article class="article_type_services" id="services">
         <div class="title">
             Предоставляемые услуги
         </div>
@@ -170,7 +172,7 @@
         <a class="btn btn_color_red" href="#">Получить консультацию</a>
     </div>
 
-    <article class="article_type_documents">
+    <article class="article_type_documents" id="documents">
         <div class="title title_color_orange title_type_documents">
             Документы и сертификаты
         </div>
@@ -208,7 +210,7 @@
         </ul>
     </article>
 
-    <article class="article_type_contacts">
+    <article class="article_type_contacts" id="map">
         <div class="title title_color_orange title_type_contacts">
             Контактная информация
         </div>
@@ -240,12 +242,37 @@
     </div>
 </div>
 
+<nav class="nav">
+    <ul class="nav__wrapper">
+        <li class="nav__item">
+            <a class="nav__link" href="#home">
+                <img src="img/icons/home.png">
+            </a>
+        </li>
+        <li class="nav__item">
+            <a class="nav__link" href="#services">
+                <img src="img/icons/service.png">
+            </a>
+        </li>
+        <li class="nav__item">
+            <a class="nav__link" href="#documents">
+                <img src="img/icons/documents.png">
+            </a>
+        </li>
+        <li class="nav__item">
+            <a class="nav__link" href="#map">
+                <img src="img/icons/map.png">
+            </a>
+        </li>
+    </ul>
+</nav>
+
 
 <script
         src="http://code.jquery.com/jquery-3.3.1.min.js"
         integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
         crossorigin="anonymous"></script>
-<script src="/js/script.js" type="text/javascript" defer></script>
+<script src="js/script.js" type="text/javascript" defer></script>
 </body>
 
 </html>
