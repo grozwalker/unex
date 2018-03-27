@@ -169,7 +169,7 @@
         </div>
     </article>
     <div class="get-consultation">
-        <a class="btn btn_color_red" href="#">Получить консультацию</a>
+        <a class="btn btn_color_red btn_type_consultation" href="#">Получить консультацию</a>
     </div>
 
     <article class="article_type_documents" id="documents">
@@ -178,34 +178,39 @@
         </div>
         <ul class="documents_wrapper">
             <li class="document">
-                <img src="img/documents/doc1.jpg" alt="">
+                <a class="docs-fancy" data-fancybox="docs" href="img/documents/doc1_small.jpg">
+                    <img src="img/documents/doc1_small.jpg" alt="">
+                </a>
             </li>
             <li class="document">
-                <img src="img/documents/doc1.jpg" alt="">
+                <a class="docs-fancy" data-fancybox="docs" href="img/documents/doc2.jpg">
+                    <img src="img/documents/doc2_small.jpg" alt="">
+                </a>
             </li>
             <li class="document">
-                <img src="img/documents/doc1.jpg" alt="">
+                <a class="docs-fancy" data-fancybox="docs" href="img/documents/doc3.jpg">
+                    <img src="img/documents/doc3_small.jpg" alt="">
+                </a>
             </li>
             <li class="document">
-                <img src="img/documents/doc1.jpg" alt="">
+                <a class="docs-fancy" data-fancybox="docs" href="img/documents/doc4.jpg">
+                    <img src="img/documents/doc4_small.jpg" alt="">
+                </a>
             </li>
             <li class="document">
-                <img src="img/documents/doc1.jpg" alt="">
+                <a class="docs-fancy" data-fancybox="docs" href="img/documents/doc5.jpg">
+                    <img src="img/documents/doc5_small.jpg" alt="">
+                </a>
             </li>
             <li class="document">
-                <img src="img/documents/doc1.jpg" alt="">
+                <a class="docs-fancy" data-fancybox="docs" href="img/documents/doc6.jpg">
+                    <img src="img/documents/doc6_small.jpg" alt="">
+                </a>
             </li>
             <li class="document">
-                <img src="img/documents/doc1.jpg" alt="">
-            </li>
-            <li class="document">
-                <img src="img/documents/doc1.jpg" alt="">
-            </li>
-            <li class="document">
-                <img src="img/documents/doc1.jpg" alt="">
-            </li>
-            <li class="document">
-                <img src="img/documents/doc1.jpg" alt="">
+                <a class="docs-fancy" data-fancybox="docs" href="img/documents/doc7.jpg">
+                    <img src="img/documents/doc7_small.jpg" alt="">
+                </a>
             </li>
         </ul>
     </article>
@@ -242,6 +247,7 @@
     </div>
 </div>
 
+
 <nav class="nav">
     <ul class="nav__wrapper">
         <li class="nav__item">
@@ -267,12 +273,38 @@
     </ul>
 </nav>
 
+<div id="request" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+      <span class="close">&times;</span>
+      <form action="mail.php" method="post" class="request-form">
+          <div class="field">
+              <label for="name">Имя</label>
+              <input type="text" id="name" class="field__input" name="name" placeholder="Введите имя" required>
+          </div>
+          <div class="field">
+              <label for="phone">Телефон</label>
+              <input type="tel" id="phone" class="field__input" name="phone" placeholder="+7 (961) 55-55-555" required>
+          </div>
+          <div class="get-consultation">
+              <a class="btn btn_color_red btn_type_submit" href="#">Получить консультацию</a>
+          </div>
+
+      </form>
+  </div>
+
+</div>
+
 
 <script
         src="http://code.jquery.com/jquery-3.3.1.min.js"
         integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
         crossorigin="anonymous"></script>
+<script src="js/jquery.fancybox.min.js" type="text/javascript" defer></script>
+<script src="js/jquery.mask.min.js" type="text/javascript" defer></script>
 <script src="js/script.js" type="text/javascript" defer></script>
+<link href="css/jquery.fancybox.min.css" rel="stylesheet">
 </body>
 
 </html>
