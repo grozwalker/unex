@@ -28,14 +28,43 @@ $(document).ready(function () {
     $('.btn_type_consultation').click(function(e) {
         e.preventDefault();
 
-        $('#request').toggle('500');
+        $('#request').toggleClass('show-modal');
 
     });
 
     $('.close').click(function(e) {
         e.preventDefault();
 
-        $('#request').toggle('500');
+        $('#request').toggleClass('show-modal');
+    });
+
+    $('.request-form').submit(function (e) {
+        e.preventDefault();
+
+        $('.btn_type_submit').prop('disabled', true);
+        $(this).hide();
+        $('.request-loader').show();
+
+
+        $.ajax({
+            url: '/mail.php',
+            type: "POST",
+            data: $('.request-form').serialize(),
+            success: function() {
+                $('.request-loader').hide();
+                $('.request-form').show();
+                $('.success-message').show();
+                $('input').val('');
+            },
+            error: function () {
+
+                $('.error-message').show();
+
+                $('.btn_type_submit').prop('disabled', false);
+                $('.request-loader').hide();
+                $('.request-form').show();
+            }
+        });
     });
 
 });

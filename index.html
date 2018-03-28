@@ -278,6 +278,7 @@
   <!-- Modal content -->
   <div class="modal-content">
       <span class="close">&times;</span>
+      <img class="request-loader" src="img/loader.gif">
       <form action="mail.php" method="post" class="request-form">
           <div class="field">
               <label for="name">Имя</label>
@@ -287,10 +288,11 @@
               <label for="phone">Телефон</label>
               <input type="tel" id="phone" class="field__input" name="phone" placeholder="+7 (961) 55-55-555" required>
           </div>
+          <p class="success-message">Сообщение успешно отправлено</p>
+          <p class="error-message">Ошибка при отправке сообщения, попробуйте позже</p>
           <div class="get-consultation">
-              <a class="btn btn_color_red btn_type_submit" href="#">Получить консультацию</a>
+              <button type="submit" class="btn btn_color_red btn_type_submit">Получить консультацию</button>
           </div>
-
       </form>
   </div>
 
