@@ -67,4 +67,18 @@ $(document).ready(function () {
         });
     });
 
+
+    var $tabs = $('.tabs__item');
+
+    $('.tabs__item').click(function () {
+
+        $('.tabs__item').removeClass('active');
+
+        $(this).addClass('active');
+
+        $('.service').removeClass('active');
+
+        $('.service:eq(' + $tabs.index(this) + ')').addClass('active');
+    });
+
 });
