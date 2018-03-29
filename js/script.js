@@ -98,7 +98,7 @@ $(document).ready(function () {
     menuItems.click(function(e) {
         console.log('lg_scroll');
         var href = $(this).attr("href"),
-            offsetTop = href === "#" ? 0 : $(href).offset().top - 50;
+            offsetTop = href === "#home" ? 0 : $(href).offset().top - 50;
         $('html, body').stop().animate({
             scrollTop: offsetTop
         }, 300);
