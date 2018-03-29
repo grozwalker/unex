@@ -19,11 +19,11 @@ $(document).ready(function () {
 
     $("#phone").mask("+7 (999) 99-99-999");
 
-    $('.nav__link').click(function(e) {
+/*    $('.nav__link').click(function(e) {
         e.preventDefault();
 
         $('html, body').animate({ scrollTop: $($(this).attr('href')).offset().top - 100 } , 500);
-    });
+    });*/
 
     $('.btn_type_consultation').click(function(e) {
         e.preventDefault();
@@ -79,6 +79,46 @@ $(document).ready(function () {
         $('.service').removeClass('active');
 
         $('.service:eq(' + $tabs.index(this) + ')').addClass('active');
+    });
+
+    // Cache selectors
+    var lastId,
+        topMenu = $('.nav'),
+        menuItems = topMenu.find("a"),
+        scrollItems = menuItems.map(function() {
+            var item = $($(this).attr("href"));
+            if (item.length) {
+                return item;
+            }
+        });
+
+    menuItems.click(function(e) {
+        var href = $(this).attr("href"),
+            offsetTop = href === "#" ? 0 : $(href).offset().top - 50;
+        $('html, body').stop().animate({
+            scrollTop: offsetTop
+        }, 300);
+        e.preventDefault();
+    });
+
+    $(window).scroll(function() {
+
+        var fromTop = $(this).scrollTop();
+
+        var cur = scrollItems.map(function() {
+            if ($(this).offset().top < fromTop)
+                return this;
+        });
+        cur = cur[cur.length - 1];
+
+        var id = cur && cur.length ? cur[0].id : "";
+
+        if (lastId !== id) {
+            lastId = id;
+            menuItems
+                .parent().removeClass('active-link')
+                .end().filter("[href='#" + id + "']").parent().addClass('active-link');
+        }
     });
 
 });

@@ -84,6 +84,22 @@ article p {
     border: 2px solid #29326b;
 }
 
+.tabs__item:nth-child(2).active .tab__outline {
+    border-color: #4a2b5b;
+}
+
+.tabs__item:nth-child(3).active .tab__outline {
+    border-color: #702248;
+}
+
+.tabs__item:nth-child(4).active .tab__outline {
+    border-color: #901a38;
+}
+
+.tabs__item:nth-child(5).active .tab__outline {
+    border-color: #b61125;
+}
+
 .tab__img{
     position: absolute;
     top: 0;
@@ -95,7 +111,24 @@ article p {
 
 .tab__title{
     display: inline-block;
+    color: #29326b;
     font-size: 14px;
+}
+
+.tabs__item:nth-child(2) .tab__title {
+    color: #4a2b5b;
+}
+
+.tabs__item:nth-child(3) .tab__title {
+    color: #702248;
+}
+
+.tabs__item:nth-child(4) .tab__title {
+    color: #901a38;
+}
+
+.tabs__item:nth-child(5) .tab__title {
+    color: #b61125;
 }
 
 .service__img {
@@ -150,15 +183,13 @@ article p {
     display: flex;
     -webkit-flex-wrap: wrap;
     flex-wrap: wrap;
-    justify-content: space-between;
 }
 
 .document {
-    flex-grow: 1;
     flex-basis: 147px;
     list-style:none;
     width: 16%;
-    margin: 2% 1% 40px 1%;
+    margin: 2% 2% 40px 1%;
 }
 
 .title_type_contacts {
@@ -187,6 +218,7 @@ article p {
 
 .copyright {
     margin: 230px 0 40px 0;
+    color: #9a9a9a;
     font-size: 14px;
     text-align: center;
 }
@@ -195,6 +227,44 @@ article p {
     position: fixed;
     top: 30%;
     right: 32px;
+}
+
+.nav__link {
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+}
+
+.link_type_home {
+    background-image: url("../img/icons/icon_home_line_32x32.png");
+}
+
+.active-link .link_type_home {
+    background-image: url("../img/icons/icon_home_32x32.png");
+}
+
+.link_type_srvc {
+    background-image: url("../img/icons/icon_srvc_line_32x32.png");
+}
+
+.active-link .link_type_srvc {
+    background-image: url("../img/icons/icon_srvc_32x32.png");
+}
+
+.link_type_doc {
+    background-image: url("../img/icons/icon_doc_line_32x32.png");
+}
+
+.active-link .link_type_doc {
+    background-image: url("../img/icons/icon_doc_32x32.png");
+}
+
+.link_type_map {
+    background-image: url("../img/icons/icon_map_line_32x32.png");
+}
+
+.active-link .link_type_map {
+    background-image: url("../img/icons/icon_map_32x32.png");
 }
 
 .nav__item {
