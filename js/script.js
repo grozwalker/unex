@@ -84,7 +84,10 @@ $(document).ready(function () {
     // Cache selectors
     var lastId,
         topMenu = $('.nav'),
+        topMenuHeight = topMenu.outerHeight() + 15,
+        // All list items
         menuItems = topMenu.find("a"),
+        // Anchors corresponding to menu items
         scrollItems = menuItems.map(function() {
             var item = $($(this).attr("href"));
             if (item.length) {
@@ -93,6 +96,7 @@ $(document).ready(function () {
         });
 
     menuItems.click(function(e) {
+        console.log('lg_scroll');
         var href = $(this).attr("href"),
             offsetTop = href === "#" ? 0 : $(href).offset().top - 50;
         $('html, body').stop().animate({
@@ -103,18 +107,19 @@ $(document).ready(function () {
 
     $(window).scroll(function() {
 
-        var fromTop = $(this).scrollTop();
+        var fromTop = $(this).scrollTop() + topMenuHeight;
+
 
         var cur = scrollItems.map(function() {
             if ($(this).offset().top < fromTop)
                 return this;
         });
         cur = cur[cur.length - 1];
-
         var id = cur && cur.length ? cur[0].id : "";
 
         if (lastId !== id) {
             lastId = id;
+            // Set/remove active class
             menuItems
                 .parent().removeClass('active-link')
                 .end().filter("[href='#" + id + "']").parent().addClass('active-link');
